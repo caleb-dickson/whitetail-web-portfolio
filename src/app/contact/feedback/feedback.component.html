@@ -1,0 +1,89 @@
+<div class="container d-flex flex-column justify-content-center my-5 pb-3" @rise>
+  <div
+    class="container bg-dark brand-light-font d-flex card col-sm-12 col-md-10 col-lg-8 col-xl-6 justify-content-center shadow mb-5 pb-5"
+  >
+    <form
+      class="needs-validation"
+      [ngClass]="{ 'was-validated': feedbackForm.invalid && !formValid }"
+      (ngSubmit)="onFeedbackSubmit(feedbackForm)"
+      #feedbackForm="ngForm"
+    >
+      <div class="form-title text-center fs-3 my-5">Tell me what you think</div>
+      <label for="senderEmail" class="form-label">Email</label>
+      <input
+        type="email"
+        class="form-control mb-2"
+        id="senderEmail"
+        name="senderEmail"
+        placeholder="your@email.com"
+        [value]="'test@email.com'"
+        ngModel
+        autofocus
+      />
+      <div class="invalid-feedback">
+        Please enter a valid email Ex. "your@email.com".
+      </div>
+      <label for="senderName" class="form-label">Full Name</label>
+      <input
+        type="text"
+        class="form-control mb-2"
+        id="senderName"
+        name="senderName"
+        placeholder="First Last"
+        ngModel
+      />
+      <div class="invalid-feedback">Please enter your name.</div>
+      <label for="senderTitle" class="form-label">Title</label>
+      <input
+        type="text"
+        class="form-control mb-5"
+        id="senderTitle"
+        name="senderTitle"
+        placeholder="Ex: Recruiter, Manager (Company, if applicable)"
+        ngModel
+      />
+      <div class="mb-2">
+        <label> Which page are you referring to?</label>
+        <div class="input-group mb-2">
+          <label for="subject" class="input-group-text">Page</label>
+          <select
+            type="text"
+            class="form-select"
+            id="subject"
+            name="subject"
+            required
+            ngModel
+          >
+            <option value="Re: Your 'Home' page.">Home</option>
+            <option value="Re: Your 'Sign Up' component.">Sign Up</option>
+            <option value="Re: Your 'Sign In' component.">Sign In</option>
+            <option value="Re: Your 'Projects' page.">Projects</option>
+            <option value="Re: Your 'About' page.">About</option>
+            <option value="Re: Your 'Contact' page.">Contact</option>
+            <option value="General site feedback.">Nonspecific</option>
+            <option value="Re: Your 'Blog' page." disabled>Blog</option>
+          </select>
+        </div>
+        <label for="message" class="form-label">Message</label>
+        <textarea
+          class="form-control"
+          id="message"
+          rows="6"
+          name="message"
+          placeholder="Comments or concerns..."
+          required
+          ngModel
+        ></textarea>
+      </div>
+      <div class="invalid-feedback">Please enter your message.</div>
+      <button
+      mat-button
+        type="submit"
+        class="btn btn-info m-4 px-4"
+        [disabled]="feedbackForm.invalid && !formValid"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<router-outlet></router-outlet>
+<div class="px-4 py-5 my-5 text-center">
+  <img
+    class="d-block mx-auto mb-4"
+    src="../../assets/wws-logo-md.png"
+    alt="Whitetail Web Studio Logo"
+    width="72"
+    height="57"
+  />
+  <h1 class="display-5 fw-bold">Blog Coming Soon!</h1>
+  <div class="col-lg-6 mx-auto">
+    <p class="lead">
+      Tentative rollout will be somewhere between {{ this.from | date: "longDate" }} and
+      {{ this.to | date: "longDate" }}.
+    </p>
+    <p class="lead">I'll be in touch!</p>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+      <button
+        mat-raised-button
+        type="button"
+        class="btn-secondary px-5 py-1 gap-3"
+        (click)="goBack()"
+      >
+        Go Back
+      </button>
+    </div>
+  </div>
+</div>

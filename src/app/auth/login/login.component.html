@@ -1,0 +1,67 @@
+<div
+  class="form-signin text-center d-flex justify-content-center align-items-center mt-2"
+  id="login"
+>
+  <form
+    (submit)="onLogin(loginForm)"
+    #loginForm="ngForm"
+    class="needs-validation d-flex flex-column align-items-center"
+    [ngClass]="{ 'was-validated': loginForm.invalid && loginForm.touched }"
+  >
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
+    <img
+      *ngIf="!isLoading"
+      class="mb-4"
+      src="../../../assets/wws-logo-md.png"
+      alt=""
+      width="72"
+      height="57"
+    />
+    <h1 class="h3 mb-3 fw-normal">Log In</h1>
+
+    <div class="form-floating">
+      <input
+        class="form-control"
+        type="email"
+        name="email"
+        id="email"
+        placeholder="name@example.com"
+        #emailInput="ngModel"
+        ngModel
+        required
+        email
+        autofocus
+      />
+      <label for="email">Email address</label>
+    </div>
+    <div class="form-floating">
+      <input
+        type="password"
+        name="password"
+        class="form-control"
+        id="password"
+        placeholder="Password"
+        #passwordInput="ngModel"
+        ngModel
+        required
+      />
+      <label for="password">Password</label>
+    </div>
+
+    <button class="w-50 btn btn-lg btn-primary mt-4" type="submit">
+      Log In
+    </button>
+    <p class="mt-2">OR</p>
+    <div class="d-flex justify-content-center">
+      <mat-spinner *ngIf="isLoading"></mat-spinner>
+      <img
+        *ngIf="!isLoading"
+        src="../../assets/btn_google_signin_dark_normal_web@2x.png"
+        alt="Login with Google!"
+        style="width: 225px"
+        (click)="googleLogin()"
+      />
+    </div>
+    <p class="mt-3 text-danger">{{ error }}</p>
+  </form>
+</div>

@@ -1,0 +1,714 @@
+<div class="about-page" id="top">
+  <!-- STICKY TABLE OF CONTENTS -->
+  <div class="col-lg-2 pt-5 sticky-top text-muted toc" @fromLeft>
+    <div class="d-md-block ms-4 text-muted" id="toc">
+      <strong class="d-block h6 my-2 pb-2">On this page</strong>
+      <ul class="list-unstyled">
+        <li>
+          <a href="/about#why" class="text-decoration-none brand-dark-font">
+            <span class="text-muted">#</span> Another Career Changer
+          </a>
+        </li>
+        <li>
+          <a
+            href="/about#beginnings"
+            class="text-decoration-none brand-dark-font"
+          >
+            <span class="text-muted">#</span> Subtle Beginnings
+          </a>
+        </li>
+        <li>
+          <a href="/about#journey" class="text-decoration-none brand-dark-font">
+            <span class="text-muted">#</span> My Coding Journey
+          </a>
+        </li>
+        <li>
+          <a href="/about#resume" class="text-decoration-none brand-dark-font">
+            <span class="text-muted">#</span> Download My Resume
+          </a>
+        </li>
+        <li class="mt-4 ms-3">
+          <a routerLink="/about" fragment="top" class="text-decoration-none"
+            ><button mat-raised-button class="bg-secondary">Back to Top</button>
+          </a>
+        </li>
+        <div class="text-primary ms-2 mt-4">
+          <li>
+            <a
+              type="button"
+              href="/about#top"
+              mat-button
+              (click)="collapseAll()"
+              >Collapse All<mat-icon>expand_less</mat-icon></a
+            >
+          </li>
+          <li>
+            <button mat-button (click)="expandAll()">
+              Expand All<mat-icon>expand_more</mat-icon>
+            </button>
+          </li>
+        </div>
+      </ul>
+    </div>
+  </div>
+  <!-- /END STICKY TABLE OF CONTENTS -->
+
+  <!-- ABOUT ME ARTICLES -->
+  <div
+    class="d-flex justify-content-start about-articles-container mb-0 articles-margin" @fromRight
+  >
+    <div class="col-11 col-md-11 col-lg-10 col-xl-9 col-xxl-8">
+      <div class="card my-5 shadow rounded-24">
+        <header class="hero-image d-flex justify-content-center">
+          <img
+            class="mt-4"
+            id="why"
+            src="../../assets/chef-collage.svg"
+            alt=""
+            style="width: 65vw; max-width: 300px"
+          />
+        </header>
+        <div class="row d-flex flex-column align-items-center">
+          <div class="col-10 single-content-sidebar my-4">
+            <h1>Why Leave a Perfectly Good Career?</h1>
+
+            <div [ngClass]="{ limitTextHeight: why.expanded ? false : true }">
+              <div class="text-end">
+                <a
+                  href="/about#why"
+                  class="text-end"
+                  (click)="toggleArticleExpand(why)"
+                >
+                  <button mat-button class="mt-4 brand-light-font">
+                    {{ !why.expanded ? null : "Collapse"
+                    }}<mat-icon *ngIf="why.expanded">expand_less</mat-icon>
+                  </button>
+                </a>
+              </div>
+              <p>
+                I was a good Chef.
+                <br />
+                I even used my GI Bill to go to a culinary school with a
+                prestigious name; Le Cordon Bleu.
+                <span *ngIf="!why.expanded" class="text-primary"
+                  >. . . . . <br /><br
+                /></span>
+              </p>
+              <div class="d-flex justify-content-center">
+                <img
+                  class="my-4"
+                  src="../../assets/open-kitchen.svg"
+                  alt=""
+                  style="width: 65vw; max-width: 300px"
+                />
+              </div>
+              <p>
+                Those first few quarters I attended really did give me a good
+                introduction to a few key skills I would later need. And they
+                did still do a good job of getting my foot in the door with job
+                placement right from the start. Not long after I decided to
+                leave the program, the school was later
+                <a
+                  class="text-muted"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.eater.com/2018/2/6/16980378/le-cordon-bleu-culinary-school-lawsuit-settlement"
+                  >sued for fraud</a
+                >
+                and closed down nationwide. Of course they were. Just my luck.
+                <br />
+                Regardless, the experience did still help get me off the ground
+                as a Chef.
+              </p>
+              <div class="d-flex justify-content-center">
+                <img
+                  class="mb-4 mt-2"
+                  src="../../assets/pastry.svg"
+                  alt=""
+                  style="width: 65vw; max-width: 300px"
+                />
+              </div>
+              <p>
+                I had my favorite parts of the resulting culinary career; those
+                peaceful mornings in the bakeshop.
+                <br />
+                That nostalgic feeling of teamwork and coordination in a fine
+                dining style
+                <a
+                  class="text-muted"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.restaurantmanifesto.com/firing-your-food/"
+                  >course firing</a
+                >.
+                <br />
+                And, as a Chef in charge of the kitchen, the affirmation and
+                satisfaction of watching my food being enjoyed and praised by
+                well-paying guests and locally famous food critics.
+              </p>
+              <p>
+                I also had my struggles, like many. Restaurant culture and
+                lifestyle are well known for <em>not</em> being of the highest
+                quality at all times when compared to more "upstanding"
+                professions.
+              </p>
+
+              <div class="d-flex justify-content-center">
+                <img
+                  class="my-4"
+                  src="../../assets/tartar.svg"
+                  alt=""
+                  style="width: 65vw; max-width: 300px"
+                />
+              </div>
+
+              <p>
+                And then, covid happened. The world shut down along with the
+                overwhelming majority of the hospitality industry.
+                <br />
+                This was my chance to find something even better. Something more
+                sustainable for the long term.
+              </p>
+              <p>
+                After all, when the seven day week loses all meaning and you're
+                on your feet 60-80 hours each "week", the clock is ticking.
+                <br />
+                No one can do that forever. Burnout isn't just a risk. It's
+                inevitable.
+              </p>
+            </div>
+
+            <div class="text-end">
+              <a
+                href="/about#why"
+                class="text-end"
+                (click)="toggleArticleExpand(why)"
+              >
+                <button mat-button class="mt-4">
+                  {{ !why.expanded ? "Read more" : "Collapse" }}
+                  <mat-icon *ngIf="!why.expanded">expand_more</mat-icon
+                  ><mat-icon *ngIf="why.expanded">expand_less</mat-icon>
+                </button>
+              </a>
+            </div>
+          </div>
+          <button mat-fab color="white" class="mb-3">
+            <a href="/about#beginnings">
+              <mat-icon class="">arrow_downward</mat-icon>
+            </a>
+          </button>
+        </div>
+      </div>
+
+      <div class="card shadow my-5 rounded-24">
+        <header class="hero-image d-flex justify-content-center">
+          <img
+            id="beginnings"
+            class="mt-4"
+            src="../../assets/wrk-exp.svg"
+            alt=""
+            style="width: 65vw; max-width: 300px"
+          />
+        </header>
+        <div class="row d-flex flex-column align-items-center">
+          <div class="col-10 single-content-sidebar my-4">
+            <h1>Subtle Beginnings</h1>
+
+            <div
+              [ngClass]="{
+                limitTextHeight: beginnings.expanded ? false : true
+              }"
+            >
+              <div class="text-end">
+                <a
+                  href="/about#beginnings"
+                  class="text-end"
+                  (click)="toggleArticleExpand(beginnings)"
+                >
+                  <button mat-button class="mt-4 brand-light-font">
+                    {{ !beginnings.expanded ? null : "Collapse..." }}
+                  </button>
+                </a>
+              </div>
+              <p>
+                My first coding related experience started when I was in the
+                Army as a combat school instructor. A nice cooldown placement
+                after dodging bombs and bullets for Uncle Sam.<span
+                  *ngIf="!beginnings.expanded"
+                  class="text-primary"
+                  >. . . . . <br /><br />
+                </span>
+                <br />
+                I used and helped maintain several spreadsheets related to the
+                school; such as for student scores and performance data.
+                Learning what functions were and seeing the power I could have
+                if I learned them well.
+              </p>
+              <div class="d-flex justify-content-center">
+                <img
+                  class="my-3"
+                  src="../../assets/class.svg"
+                  alt=""
+                  style="width: 65vw; max-width: 300px"
+                />
+              </div>
+              <p class="text-muted fs-4">Functions are cool.</p>
+              <p>
+                It wasn't until years later that I would again encounter Excel
+                functions in any meaningful way.
+                <br />
+                As a Chef I used a spreadsheet to make well designed schedules
+                for my staff that also kept us within budget and somewhat agile
+                when we expected an especially slow or busy week ahead. Once
+                again, the efficiency and power of programming tickled those
+                dopamine factories in my brain. This of course then led to me
+                developing other spreadsheets that helped me track the quantity
+                and value of my inventory as well as alert me when I might be
+                getting overcharged by my purveyors for ingredients or
+                equipment.
+                <br />
+                In fact, it was in part due to my spreadsheets that I was able
+                to discover a pattern of overcharging in the invoices. From that
+                data I successfully(!) negotiated for a $40,000 credit from one
+                of the purveyors at one of the restaurants I worked with
+                <em>and</em> a renegotiation of the contract with set-in-stone,
+                transparent pricing margins disclosing the originating purchase
+                price to compare to their resale price.
+                <br />
+                And $40k is no small sum for a small business like that.
+              </p>
+              <div class="d-flex justify-content-center">
+                <img
+                  class="my-5"
+                  src="../../assets/supper-club-home-screen.svg"
+                  alt=""
+                  style="width: 65vw; max-width: 300px"
+                />
+              </div>
+              <p class="text-muted fs-4">Business tech.</p>
+              <p>
+                In early 2020, when the pandemic set fire to the restaurant
+                industry, I used the popup food business I was already working
+                on to shift gears and launch a private events service.
+                <br />
+                Of course, I had a spreadsheet for everything. I had a profit
+                and loss spreadsheet to track overall spending and revenue. I
+                had another that gave me event pricing to keep me within my
+                margins and nail down an appropriate price point for every
+                plate, and every guest at each event. Everything was data driven
+                and predictable. I hit my target margins exactly, every time. No
+                penny went unnoticed. I also made my first website to establish
+                a web presence as well. This was the first time I had ever done
+                anything like web development. Of course, at the time I had no
+                coding experience beyond simple Excel spreadsheets, so I used
+                Squarespace to make it.
+              </p>
+              <div class="d-flex justify-content-center">
+                <img
+                  class="my-5"
+                  src="../../assets/supper-club-events-screen.svg"
+                  alt=""
+                  style="width: 65vw; max-width: 300px"
+                />
+              </div>
+              <p class="text-muted fs-4">"So that's where ads come from."</p>
+              <p>
+                I set up social media on Facebook and Instagram, generated and
+                posted content. I learned how to navigate and use the Facebook
+                Business Manager, run targeted ads for the people I wanted to
+                reach and connect everything installing Facebook Pixel code on
+                my website. My ads on each platform linked to my website with a
+                custom URL for traffic analytics.
+                <br />
+                This, I think, is where the obsession really began. I found
+                myself enjoying the tech so much more than the cooking. I would
+                fantasize about doing just the web and social media full time.
+                Ah, wouldn't that be nice to just do this all day every day? But
+                no, probably not. I'm sure you need a whole master's degree for
+                that and I have no interest in taking on that kind of debt,
+                financial or otherwise. If only, right?
+              </p>
+              <div class="d-flex justify-content-center">
+                <img
+                  class="my-5"
+                  src="../../assets/insurance-screen.svg"
+                  alt=""
+                  style="width: 65vw; max-width: 300px"
+                />
+              </div>
+              <p class="text-muted fs-4">"Wouldn't it be nice?"</p>
+              <p>
+                Well, fast forward about a year. I had tried my hand at
+                insurance, working as an independent broker, knowing very well
+                that I had no business doing sales work at that level of
+                intensity.
+                <br />
+                I used the same marketing strategy as before, but I was tackling
+                it from two ends. I used the same web + social + ads combo for
+                lead generation and also purchased third party leads as well.
+                And that had actually worked just fine and I did fairly well;
+                better than most, not nearly as good as some.
+                <br />
+                But, I really just had no long term aptitude for that kind of
+                work. I enjoyed the detail oriented aspect of what insurance is,
+                learning all about it and all the details that govern insurance,
+                how it all works and what types work best for certain situations
+                and goals. I was a fantastic advisor and I closed far more deals
+                than I lost. Sure, I liked being able to win clients and
+                influence people to do better for themselves.
+                <br />
+                I handle sales quite well, just not when it involves 500+
+                approaches every day. And I also just don't enjoy that level of
+                constant social interaction. Some people do, I just don't.
+                <br />
+                No, my passion was in the impersonal details. It was always the
+                tech that I enjoyed more than everything else. There was just
+                nothing better than that moment when you sit down, log in, and
+                crack into a new project. Except for seeing the finished
+                product, of course.
+              </p>
+            </div>
+            <div class="text-end">
+              <a
+                href="/about#beginnings"
+                class="text-end"
+                (click)="toggleArticleExpand(beginnings)"
+              >
+                <button mat-button class="mt-4">
+                  {{ !beginnings.expanded ? "Read more..." : "Collapse..." }}
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center mt-4">
+          <button mat-fab color="white" class="mb-3">
+            <a href="/about#journey">
+              <mat-icon class="">arrow_downward</mat-icon>
+            </a>
+          </button>
+        </div>
+      </div>
+
+      <div class="card shadow mb-5 rounded-24">
+        <header class="hero-image d-flex justify-content-center">
+          <img
+            id="journey"
+            class="mt-4"
+            src="../../../assets/coding-jrny.svg"
+            alt=""
+            style="width: 65vw; max-width: 300px"
+          />
+        </header>
+        <div class="row d-flex flex-column align-items-center">
+          <div class="col-10 single-content-sidebar my-4">
+            <h1 class="text-center"><em>My</em> Coding Journey</h1>
+            <div class="d-flex flex-wrap justify-content-center mb-4">
+              <img
+                src="https://img.shields.io/badge/-HTML-dcdfe3?logo=html5&logoColor=E34F26&style=plastic"
+                class="m-1"
+                alt="HTML5"
+              />
+              <img
+                src="https://img.shields.io/badge/-CSS-dcdfe3?logo=css3&logoColor=1572B6&style=plastic"
+                class="m-1"
+                alt="CSS3"
+              />
+              <img
+                src="https://img.shields.io/badge/-Javascript-dcdfe3?logo=javascript&logoColor=F7DF1E&style=plastic"
+                class="m-1"
+                alt="Javascript"
+              />
+              <img
+                src="https://img.shields.io/badge/-Bootstrap%205-dcdfe3?logo=bootstrap&logoColor=7952B3&style=plastic"
+                class="m-1"
+                alt="Bootstrap 5"
+              />
+              <img
+                src="https://img.shields.io/badge/-Material%20Design-dcdfe3?logo=Material%20Design&logoColor=757575&style=plastic"
+                class="m-1"
+                alt="Google Material Design"
+              />
+              <br />
+              <img
+                src="https://img.shields.io/badge/-Angular-dcdfe3?logo=angular&logoColor=DD0031&style=plastic"
+                class="m-1"
+                alt="Angular"
+              />
+              <img
+                src="https://img.shields.io/badge/-MongoDB-dcdfe3?logo=mongodb&logoColor=47A248&style=plastic"
+                class="m-1"
+                alt="Mongo DB"
+              />
+              <img
+                src="https://img.shields.io/badge/-Node.js-dcdfe3?logo=node.js&logoColor=339933&style=plastic"
+                class="m-1"
+                alt="Node.js"
+              />
+              <img
+                src="https://img.shields.io/badge/-Express.js-dcdfe3?logo=express&logoColor=000000&style=plastic"
+                class="m-1"
+                alt="Express.js"
+              />
+              <img
+                src="https://img.shields.io/badge/-Heroku-dcdfe3?logo=heroku&logoColor=430098&style=plastic"
+                class="m-1"
+                alt="Heroku"
+              />
+              <img
+                src="https://img.shields.io/badge/-Firebase-dcdfe3?logo=firebase&logoColor=FFCA28&style=plastic"
+                class="m-1"
+                alt="Firebase"
+              />
+              <img
+                src="https://img.shields.io/badge/-AWS%20EC2%20&%20EB3-dcdfe3?logo=amazonaws&logoColor=232F3E&style=plastic"
+                class="m-1"
+                alt="Amazon Web Services, EC2"
+              />
+            </div>
+            <div>
+              <div
+                [ngClass]="{ limitTextHeight: journey.expanded ? false : true }"
+              >
+                <div class="text-end">
+                  <a
+                    href="/about#journey"
+                    class="text-end"
+                    (click)="toggleArticleExpand(journey)"
+                  >
+                    <button mat-button class="mt-4 brand-light-font">
+                      {{ journey.expanded ? "Collapse..." : null }}
+                    </button>
+                  </a>
+                </div>
+                <span class="text-muted fs-4">
+                  <em>"It's too expensive. You can't do it."</em>
+                </span>
+                <p>
+                  A little over a year later, I had accepted my reality and was
+                  still determined to find my
+                  <span *ngIf="!journey.expanded" class="text-primary"
+                    >. . . . . <br /><br /> </span
+                  >next career.
+                  <br />
+                  I had survived the military and a combined 27 months of combat
+                  overseas.
+                  <br />
+                  I survived the big city fine dining culinary scene, more or
+                  less, and the global and industrial crises that followed.
+                  <br />
+                  Now, I had to pick myself back up, and move on, and continue
+                  to push forward. I had to find my next (and please
+                  <em>please</em> be the last) career. <br />
+                </p>
+
+                <p>
+                  So, I do my research. I look into all the VA programs with my
+                  GI Bill having been chewed up and swallowed by a fraudulent
+                  culinary school.
+                  <br />
+                  I looked into trade schools, apprenticeships and union
+                  training programs. And that all seemed fine. I was especially
+                  interested in the local electricians union. But at the end of
+                  the day it really just didn't motivate me enough to take the
+                  leap. Then, right around November of 2021, my wife casually
+                  mentioned to me a Tiktok video she saw about coding and coding
+                  bootcamps.
+                </p>
+
+                <p class="text-muted fs-4" id=""><em>"Or maybe, I can?"</em></p>
+
+                <p>
+                  Again, like I said before, I had written off web development
+                  as a career thinking the barrier of entry, the time
+                  requirement, the academic fluff and outrageous student debt
+                  I'd surely need to take on to get a computer science degree
+                  (and even to some degree, a bootcamp certification), was just
+                  too expensive for me.
+                </p>
+                <p>
+                  But I decided to do some research. I'm finding youtube videos
+                  left, right and center. Blog articles outlining all the ways
+                  you <em>can</em> learn the skills you need to actually break
+                  into the tech industry as a developer.
+                </p>
+
+                <p>I had seen all I needed to see. I'm in. Let's go.</p>
+
+                <p class="text-muted fs-4" id=""><em>New Purpose.</em></p>
+
+                <p>
+                  After weighing all the options I could find and reading all
+                  the bootcamp reviews and “If I could do it all over again”
+                  articles and videos, I had decided on the self taught route.
+                  With my personality, learning style and work ethic, I'm
+                  perfect for that.
+                  <br />
+                  Looking at all of the self study resources I could find, I
+                  finally settled on
+                  <a
+                    class="text-reset"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.theodinproject.com/"
+                    >The Odin Project</a
+                  >. I liked them because they start you off in a unix
+                  environment pushing git commits to github from day one. That
+                  was pretty cool. I went through the entire Foundations course,
+                  using a few Udemy resources as needed; anytime I felt stuck or
+                  just wasn't getting it.
+                </p>
+
+                <p class="text-muted fs-4" id="">React, or.. React?</p>
+
+                <p>
+                  But as I finished that section there was a choice to be made.
+                  The Odin Project is then forked into two options for full
+                  stack learning and frameworks: React and Ruby on Rails, or
+                  React and Node.js.
+                  <br />
+                  Ok, well, then I needed to figure that out. More research. I
+                  found out there are several highly popular frontend and
+                  backend frameworks I could choose from. React seemed to be the
+                  most popular. It's a javascript <em>library</em> that was
+                  created, and now maintained by Facebook.
+                  <br />
+                  And. It's. <em>Everywhere</em>.
+                </p>
+
+                <p class="text-muted fs-4" id="">Angular?</p>
+
+                <p>
+                  I noticed that Angular was another popular one. It's a very
+                  well supported
+                  <em>framework</em> based on a language called
+                  <em>Typescript</em> that was created, and now maintained by
+                  Google. What's Typescript? Come to find out, it's coding
+                  bliss, that's what it is. And the Angular way just feels so
+                  right to me.
+                </p>
+                <p>
+                  Now, don't get me wrong. I fully expect to learn and get
+                  comfortable with other frameworks, tech stacks and programming
+                  languages later on. From what I've seen it's pretty much
+                  inevitable that I'll need to move forward at some point,
+                  probably sooner rather than later. But Angular has been very,
+                  very good to me. I'm still happy with it and I think I chose
+                  my first framework wisely.
+                </p>
+
+                <p class="text-muted fs-4" id="">The Angular Way.</p>
+
+                <p>
+                  Anyway, since Angular wasn't covered by tOP, I got started
+                  with Max Schwarzmuller of
+                  <a
+                    class="text-reset"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://pro.academind.com/"
+                    >Academind</a
+                  >. I took a brief dive into Typescript, enough to get as
+                  comfortable with it as I was with vanilla javascript, and then
+                  went right into his complete guide to Angular <em>and</em> his
+                  MEAN Stack course where I learned about:
+                </p>
+                <ul class="list">
+                  <p>Angular Fundamentals:</p>
+                  <li>Debugging</li>
+                  <li>Angular Components</li>
+                  <li>Data Binding</li>
+                  <li>Event Binding</li>
+                  <li>Directives</li>
+                  <li>Services</li>
+                  <li>Routing</li>
+                  <li>Template Driven Forms</li>
+                  <li>Reactive Forms</li>
+                  <li>Observables/Rxjs basics</li>
+                  <li>
+                    Simple authentication logic using JSON Web Token and Bcrypt
+                    js
+                  </li>
+                  <li>Firebase Authentication</li>
+                  <li>Component Modules and Routing</li>
+                  <li>Lazy Loaded Front End Routes</li>
+                  <li>Pre Loading</li>
+                  <li>Creating a Node.js Server with Express.js</li>
+                  <li>REST APIs</li>
+                  <li>Backend Routes, Controllers</li>
+                  <li>HTTP Error Handling</li>
+                  <li>Handling HTTP Response Data</li>
+                  <br />
+                  <p>HTTP Requests:</p>
+                  <li>POST</li>
+                  <li>PUT</li>
+                  <li>GET</li>
+                  <li>PATCH</li>
+                  <li>DELETE</li>
+                  <br />
+                  <p>MongoDB:</p>
+                  <li>save()</li>
+                  <li>updateOne()</li>
+                  <li>find()</li>
+                  <li>findById()</li>
+                  <li>deleteOne()</li>
+                  <br />
+                  <p>App Deployent:</p>
+                  <li>Firebase Deployment</li>
+                  <li>AWS EC2/S3 App Deployment</li>
+                </ul>
+                <p>
+                  WOW.
+                  <br />
+                  I didn't even realize until I wrote all that out just how far
+                  I've come. And I've used the vast majority of that to create
+                  this portfolio piece you're reading this on. Pretty cool huh?
+                </p>
+              </div>
+            </div>
+
+            <div class="text-end">
+              <a
+                href="/about#journey"
+                class="text-end"
+                (click)="toggleArticleExpand(journey)"
+              >
+                <button mat-button class="mt-4">
+                  {{ !journey.expanded ? "Read more..." : "Collapse..." }}
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-center mt-1">
+        <a
+          [href]="'../../../assets/caleb-resume.pdf'"
+          class="btn-secondary border shadow py-1 px-4"
+          id="resume"
+          download="caleb-dickson-resume.pdf"
+          matTooltip="caleb-resume.pdf"
+          mat-raised-button
+          >Download My Resume</a
+        >
+      </div>
+      <div class="d-flex justify-content-center mt-1">
+        <a
+          class="btn-secondary py-1 px-4 mt-4"
+          routerLink="/projects"
+          routerLinkActive="active"
+          mat-raised-button
+          >View Projects
+          <mat-icon class="text-light">arrow_forward_ios</mat-icon></a
+        >
+      </div>
+      <div class="d-flex justify-content-center my-5">
+        <a routerLink="/about" fragment="top" class="text-decoration-none"
+          ><button mat-raised-button class="bg-secondary">Back to Top</button>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!--^^^ /END ABOUT ME ARTICLES -->
+</div>

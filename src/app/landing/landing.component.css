@@ -1,0 +1,21 @@
+.dev-notes {
+  font-family: 'Fira Code', monospace;
+}
+
+.welcome-hero {
+  display: flex;
+  height: 100vh;
+}
+
+.headshot {
+  height: 50vw;
+  max-height: 200px;
+}
+
+.welcome-body {
+  display: flex;
+}
+
+.small-text {
+  font-size: 10px;
+}

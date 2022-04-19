@@ -1,0 +1,142 @@
+<div class="component-container" @rise>
+  <p class="small-text ms-3 dev-notes text-center text-sm-start">
+    Actively seeking employment.
+    <br />
+    ::: Updated - {{ this.lastUpdated | date: "fullDate" }} :::
+  </p>
+  <div *ngIf="isLoading" class="d-flex justify-content-center">
+    <mat-spinner></mat-spinner>
+  </div>
+  <div class="container col-xxl-10 px-4 py-5 ps-4">
+    <section>
+      <div
+        class="row flex-row-reverse align-content-center justify-content-center g-5 pb-5 border-bottom border-2"
+      >
+        <div class="d-flex justify-content-center col-10 col-lg-4 ps-lg-0">
+          <img
+            *ngIf="!isAuthenticated"
+            src="../../assets/headshot-lg.png"
+            class="d-block mx-lg-auto img-fluid headshot"
+            alt="A professional headshot of Caleb Dickson."
+            loading="lazy"
+          />
+          <img
+            *ngIf="
+              isAuthenticated && userPhoto !== undefined && userPhoto !== null
+            "
+            [src]="this.userPhoto"
+            class="d-block mx-lg-auto img-fluid headshot rounded-24"
+            alt="Your profile photo."
+            loading="lazy"
+          />
+        </div>
+        <div class="col-lg-8 brand-dark-font">
+          <!-- IF USER IS NOT LOGGED IN OR IF THERE IS SOME ERROR IN RETRIEVING THE DIPLAY NAME: FALL BACK TO THIS -->
+          <h1 *ngIf="!isAuthenticated" class="display-5 ms-5 fw-bold lh-1 mb-3">
+            Welcome!
+          </h1>
+          <h1
+            *ngIf="isAuthenticated"
+            class="display-5 text-center fw-bold lh-1 mb-3"
+          >
+            Welcome{{ ', ' + displayName }}!
+          </h1>
+          <p *ngIf="!isAuthenticated" class="lead mb-5 ms-5 me-4">
+            Hi, I'm Caleb, <br />
+            I'm a front end Angular developer and this is my portfolio
+            website.<br /><br />Here, you'll find out a little more about me,
+            what I do, and where I've been.
+          </p>
+          <div
+            class="d-grid gap-4 justify-content-center d-md-flex justify-content-center w-sm-auto mt-5"
+          >
+            <button
+              mat-raised-button
+              type="button"
+              class="btn btn-lg btn-secondary brand-dark-font px-4 py-1 shadow"
+              routerLink="/projects"
+            >
+              student projects
+            </button>
+            <button
+              mat-raised-button
+              type="button"
+              class="btn btn-lg btn-secondary brand-dark-font px-4 py-1 me-md-2 shadow"
+              routerLink="/about"
+            >
+              about me
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <app-auth *ngIf="!isAuthenticated" id="auth"></app-auth>
+
+    <div *ngIf="!isAuthenticated" class="mb-4 border-top border-2"></div>
+
+    <div class="d-flex justify-content-center mt-5">
+      <div class="col-lg-6 col-md-8 text-center fs-5 pt-2 pb-5 shadow">
+        <p class="fs-4">Don't forget!</p>
+        <p class="px-4">
+          If you haven't already, sign up to the newsletter to get bi-weekly
+          updates on my progress.
+        </p>
+        <div class="d-flex justify-content-center">
+          <a
+            mat-raised-button
+            type="button"
+            class="btn-lg brand-dark-background brand-bright-font px-5 py-2"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://enigmatic-taiga-98480.herokuapp.com/"
+            >Sign Up</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <section class="">
+      <div
+        class="row flex-row justify-items-center g-5 my-5 pb-2 brand-dark-font"
+      >
+        <div class="col-md-10 col-sm-10 col-lg-4">
+          <h4>Who is this site for?</h4>
+          <p>
+            I made this website as a professional porfolio piece aimed at an
+            audience of tech industry hiring managers, recruiters, and also
+            students that are new to web development and coding in general.
+          </p>
+        </div>
+        <div class="col-md-10 col-sm-10 col-lg-4">
+          <h4>But, why?</h4>
+          <p>
+            New students visiting this site will gain insight into what a
+            possible path to learning web development as a front end Angular
+            developer could look like.
+            <br />
+            <br />
+            Established professionals will gain a better understanding of my
+            current skill level and my aptitude for future skills progression.
+          </p>
+        </div>
+        <div
+          class="d-flex flex-column align-items-center col-md-10 col-sm-10 col-lg-4 text-center"
+        >
+          <h4 class="mb-4" id="how">
+            Click here to learn more about my website.
+          </h4>
+          <div class="d-flex justify-content-center col-lg-6">
+            <button
+              mat-raised-button
+              class="btn-outline-secondary brand-dark-font mb-5"
+              routerLink="/site-info"
+            >
+              View Site Info
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

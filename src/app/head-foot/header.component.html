@@ -1,0 +1,122 @@
+<nav class="navbar navbar-expand-lg navbar-light border-bottom" id="site-nav">
+  <div class="container-fluid" id="site-nav">
+    <a class="navbar-brand"
+    (click)="this.navbarCollapsed = true"
+      ><img
+        src="../../assets//whitetail.png"
+        id="site-logo"
+        alt="Whitetail Web Studio logo"
+        routerLink="/"
+    /></a>
+    <!-- navbar-toggler "collapsed" -->
+    <button
+      class="navbar-toggler"
+      id="menuToggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      (click)="toggleCollapsedHeader()"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" [ngClass]="this.navbarCollapsed ? null : 'show'" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item">
+          <a
+            class="nav-link brand-light-font"
+            aria-current="page"
+            routerLink="/home"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            (click)="toggleCollapsedHeader()"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link brand-light-font"
+            routerLink="/about"
+            routerLinkActive="active"
+            matTooltip="About Me"
+            (click)="toggleCollapsedHeader()"
+            >About Me
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link brand-light-font"
+            routerLink="/projects"
+            routerLinkActive="active"
+            matTooltip="Student projects I've done"
+            (click)="toggleCollapsedHeader()"
+          >
+            My Work
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle brand-light-font"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            id="aboutDropdown"
+            >Contact
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li class="nav-item nav-dropdown">
+              <a
+                class="nav-link brand-light-font"
+                routerLink="/contact"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                (click)="toggleCollapsedHeader()"
+                >Get in Touch
+              </a>
+            </li>
+            <li class="nav-item nav-dropdown">
+              <a
+                class="nav-link brand-light-font"
+                routerLink="/feedback"
+                routerLinkActive="active"
+                (click)="toggleCollapsedHeader()"
+                >UX/UI Feedback</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item" matTooltip="Under Construction!">
+          <a class="nav-link" routerLink="/blog" routerLinkActive="active"
+            >Blog</a
+          >
+        </li>
+        <li *ngIf="!isAuthenticated" class="d-flex justify-content-center">
+          <a
+          mat-stroked-button
+          type="button"
+          class="brand-bright-font brand-dark-background ms-2 my-2 px-4"
+          (click)="onOpenAuth('login'); toggleCollapsedHeader()"
+        >
+          Log In
+        </a>
+        </li>
+        <li *ngIf="isAuthenticated" class="d-flex justify-content-center">
+          <a
+            mat-stroked-button
+            type="button"
+            class="btn-outline-secondary ms-2 my-2 px-4"
+            (click)="onLogout(); toggleCollapsedHeader()"
+            >Log Out</a
+          >
+        </li>
+        <p *ngIf="isAuthenticated" class="text-center d-lg-none mt-3">
+          {{ displayName ? "Logged in as " + displayName : "Logged in as " + userEmail }}
+          <br>
+          {{ displayName ?  "(" + userEmail + ")" : null }}
+        </p>
+      </ul>
+    </div>
+  </div>
+</nav>

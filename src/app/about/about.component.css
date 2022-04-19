@@ -1,0 +1,54 @@
+.about-page {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.toc {
+  position: sticky;
+  height: 14rem;
+  min-width: 250px;
+  margin-bottom: 20vh !important;
+}
+
+.about-articles-container {
+  min-width: 400px;
+}
+
+.limitTextHeight {
+  height: 7.5rem;
+  overflow: hidden;
+  color: grey;
+}
+
+.list {
+  font-size: 0.9rem;
+}
+
+@media (min-width: 1150px) {
+  .articles-margin {
+    margin-left: 15vw !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .articles-margin {
+    margin-left: 5vw;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .about-page {
+    display: block;
+    margin-left: 3vw;
+  }
+
+  .toc {
+    position: relative;
+    margin-bottom: 10vh;
+  }
+
+  .nav-link.active {
+    color: #eb610b !important;
+  }
+}

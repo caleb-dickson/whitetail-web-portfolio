@@ -1,0 +1,38 @@
+<div class="container col-xl-12 col-xxl-10 px-4 mt-5 mb-5 pt-5" id="signup">
+  <div class="row align-items-center g-lg-5">
+    <div class="col-lg-6 text-lg-start">
+      <h1 class="display-5 fw-bold lh-1 mb-4">
+        Sign up to gain access to the blog
+      </h1>
+      <p class="fs-4">
+        I still have lots in store for this website as well as several other
+        projects in various stages of delevopment.
+      </p>
+      <p class="fs-4">
+        If you sign up, you'll get first notice when the upcoming blog component
+        is rolled out, and I'll send you bi-weekly email updates on my progress.
+      </p>
+    </div>
+    <div class="col-md-10 mx-auto col-lg-5 text-center">
+      <div class="mb-4">
+        <button
+          mat-raised-button
+          type="button"
+          class="btn-lg brand-bright-background brand-dark-font px-5 py-2 shadow link"
+          (click)="onOpenAuth('signup')"
+        >
+          Sign Up!
+        </button>
+      </div>
+      <p>OR</p>
+      <button
+        mat-raised-button
+        type="button"
+        class="btn-lg brand-dark-background brand-bright-font px-5 py-2 shadow link"
+        (click)="onOpenAuth('login')"
+      >
+        Log In
+      </button>
+    </div>
+  </div>
+</div>

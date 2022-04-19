@@ -1,0 +1,148 @@
+<div class="d-flex flex-column align-items-center">
+  <div class="container col-sm-10 col-md-10 col-lg-8 col-xl-6 m-5">
+    <h1 class="title text-center mb-5">About this site</h1>
+
+    <div class="container">
+      <p>
+        I designed this site for demo purposes as an
+        <a
+          class="text-danger"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://angular.io/guide/what-is-angular"
+          >Angular</a
+        >
+        SPA (Single Page Application) hosted on
+        <a
+          class="brand-light-font"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://firebase.google.com/"
+          >Firebase</a
+        >.
+      </p>
+      <p>Here are just a few topics I want to specifically touch on for now:</p>
+    </div>
+
+    <div class="container">
+      <ul class="list-unstyled ms-4">
+        <h4 class="text-muted mt-5">Tech Overview</h4>
+        <ul class="list">
+          <p>
+            Here is a list of most of the concepts used in the development of
+            this site:
+          </p>
+          <li>Angular Components</li>
+          <li>Data Binding</li>
+          <li>String Interpolation</li>
+          <li>Event Binding</li>
+          <li>Directives (*ngFor, *ngIf, *ngClass etc.)</li>
+          <li>Routing</li>
+          <li>Template Driven Forms</li>
+          <li>Observables/Rxjs basics</li>
+          <li>Firebase Authentication</li>
+          <li>Feature Modules</li>
+          <li>Lazy Loaded Front End Routes</li>
+          <li>Module Pre Loading</li>
+          <li>Debugging</li>
+          <li>Lots of Debugging</li>
+          <br />
+          <li>
+            Services (primarily the Auth service, but <br />
+            there is also a small "App" service that handles <br />
+            a few minor tasks app-wide)
+          </li>
+          <li>HTTP Post Requests</li>
+          <li>Handling HTTP Response Data</li>
+          <li>HTTP Error Handling</li>
+          <br />
+          <li class="list-unstyled">Backend:</li>
+          <li>Firebase Auth</li>
+          <li>Firebase Firestore Database</li>
+          <li>Firebase Trigger Email Extension for the contact forms</li>
+          <br />
+          <li class="list-unstyled">Hosting:</li>
+          <li>Firebase Hosting</li>
+        </ul>
+        <li class="mt-4">
+          <h4 class="text-muted">Home</h4>
+          <p>
+            Just below the welcome hero lies the Auth component which provides
+            the user interface for the Sign Up and Sign In functionality.
+          </p>
+          <p>In the UI, once the user signs up or signs in:</p>
+          <ul>
+            <li>The Auth component is removed from the DOM.</li>
+            <li>The Logout button is rendered in the header.</li>
+            <li>
+              The user's login email is shown in both the header (collapsed
+              only) and footer.
+            </li>
+            <li>The user's name appears in the Welcome hero.</li>
+            <li>
+              When the user clicks on the Blog link they are no longer
+              redirected to Auth, the Blog route is rendered.
+            </li>
+          </ul>
+        </li>
+
+        <li class="mt-4">
+          <h4 class="text-muted">Authorization</h4>
+          <p>
+            <a
+              *ngIf="!isAuthenticated"
+              class="brand-accent-font"
+              role="button"
+              (click)="onOpenAuth('signup')"
+              >Sign Up</a
+            >
+            <span *ngIf="isAuthenticated">Sign Up</span>,
+            <a
+              *ngIf="!isAuthenticated"
+              class="brand-accent-font"
+              role="button"
+              (click)="onOpenAuth('login')"
+              >Log In</a
+            ><span *ngIf="isAuthenticated">Log In</span>
+            and Log Out functionality is handled programmatically in the front
+            end code and supported by
+            <a
+              class="brand-light-font"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://firebase.google.com/products/auth"
+              >Firebase Authentication</a
+            >
+            on the back end.
+          </p>
+        </li>
+      </ul>
+    </div>
+
+    <p>
+      Other than that, just have a look around! You can press
+      <span class="material-icons align-text-bottom">
+        keyboard_command_key
+      </span>
+      <span class="fs-3"
+        >+ <span class="material-icons"> keyboard_option_key </span> + j
+      </span>
+      <br />
+      (Ctrl + shift + j for microsoft users) or right click to inspect and have
+      a look at the code.
+    </p>
+    <p>
+      If you're on a mobile device or not sure where to start, the "About Me"
+      section is a good place to go first.
+    </p>
+    <a
+      mat-raised-button
+      type="button"
+      class="btn-secondary brand-dark-font px-4 py-1 ms-5"
+      routerLink="/about"
+      routerLinkActive="active"
+    >
+      Go to About Me
+    </a>
+  </div>
+</div>

@@ -1,0 +1,91 @@
+<div class="container marketing my-5 pb-5">
+  <div class="row">
+    <div class="col-lg-4 d-flex flex-column align-items-center mb-5 pb-4">
+      <img
+        class="bd-placeholder-img rounded-circle"
+        src="../../assets/cheftricks.svg"
+        width="140"
+        height="140"
+        xmlns="http://www.w3.org/2000/svg"
+        role="img"
+        aria-label="Placeholder: 140x140"
+        preserveAspectRatio="xMidYMid slice"
+        focusable="false"
+      />
+
+      <div class="text-center">
+        <h2>Early Learning</h2>
+        <p>Vanilla.dev</p>
+      </div>
+      <div>
+        <a
+          mat-raised-button
+          class="bg-secondary px-3 py-1 link"
+          routerLink="/projects/early"
+          fragment="project-detail"
+          routerLinkActive="activeLink"
+          >View Projects<mat-icon>expand_more</mat-icon></a
+        >
+      </div>
+    </div>
+
+    <div class="col-lg-4 d-flex flex-column align-items-center mb-5 pb-4">
+      <img
+        class="bd-placeholder-img rounded-circle"
+        src="../../assets/calculator.png"
+        width="140"
+        height="140"
+        xmlns="http://www.w3.org/2000/svg"
+        role="img"
+        aria-label="Placeholder: 140x140"
+        preserveAspectRatio="xMidYMid slice"
+        focusable="false"
+      />
+
+      <div class="text-center">
+        <h2>Intermediate Learning</h2>
+        <p>New tricks.</p>
+      </div>
+      <div>
+        <a
+          mat-raised-button
+          class="bg-secondary px-3 py-1 link"
+          routerLink="/projects/intermediate"
+          fragment="project-detail"
+          routerLinkActive="activeLink"
+          >View Projects<mat-icon>expand_more</mat-icon></a
+        >
+      </div>
+    </div>
+    <div class="col-lg-4 d-flex flex-column align-items-center">
+      <img
+        class="bd-placeholder-img rounded-circle"
+        src="../../assets/mean-stack.png"
+        width="140"
+        height="140"
+        xmlns="http://www.w3.org/2000/svg"
+        role="img"
+        aria-label="Placeholder: 140x140"
+        preserveAspectRatio="xMidYMid slice"
+        focusable="false"
+      />
+
+      <div class="text-center">
+        <h2>Learning a Framework</h2>
+        <p>Turbo Mode: On</p>
+      </div>
+      <div>
+        <a
+          mat-raised-button
+          class="bg-secondary px-3 py-1 link"
+          routerLink="/projects/frameworks"
+          fragment="project-detail"
+          routerLinkActive="activeLink"
+          >View Projects<mat-icon>expand_more</mat-icon></a
+        >
+      </div>
+    </div>
+  </div>
+
+  <router-outlet id="project-detail"></router-outlet>
+</div>

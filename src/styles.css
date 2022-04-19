@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100vh;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.link:hover {
+  color: #eb610b !important;
+}
+
+.activeLink {
+  color: #eb610b !important;
+}
+
+.brand-dark-font {
+  color: #001427 !important;
+}
+
+.brand-accent-font {
+  color: #eb610b !important;
+}
+
+.brand-light-font {
+  color: #6c757d !important;
+}
+
+.brand-bright-font {
+  color: #2cc5d4 !important;
+}
+
+.brand-dark-background {
+  background-color: #001427 !important;
+}
+
+.brand-accent-background {
+  background-color: #eb610b !important;
+}
+
+.brand-light-background {
+  background-color: #6c757d !important;
+}
+
+.brand-bright-background {
+  background-color: #2cc5d4 !important;
+}
+
+.rounded-24 {
+  border-radius: 24px;
+}
+
+.rounded-18 {
+  border-radius: 18px;
+}

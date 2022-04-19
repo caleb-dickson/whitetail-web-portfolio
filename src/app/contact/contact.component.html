@@ -1,0 +1,128 @@
+<div class="container col-xxl-10 px-2 mt-3 pt-3 brand-dark-font">
+  <div class="row align-items-center g-2">
+    <div class="col-lg-7" @fromLeft>
+      <div class="d-flex justify-content-center">
+        <div class="text-center">
+          <h1
+            class="d-flex flex-column text-center justify-content-center display-6 fw-bold lh-1 mb-3"
+            id="text"
+          >
+            Let's Connect
+          </h1>
+          <div class="col-md-12 mx-auto">
+            <div class="p-4 p-5 border rounded-3 mb-5">
+              <p class="col-md-12 fs-4 text-center">
+                You can reach out directly here
+              </p>
+              <a [href]="'sms:' + phoneNumber">
+                <button
+                  class="ml-auto w-75 btn btn-lg btn-outline-dark mt-2"
+                  type="button"
+                >
+                  Text Me
+                </button>
+              </a>
+              <p class="col-md-12 fs-4 text-center mb-0 py-2">or</p>
+              <a [href]="'tel:' + phoneNumber">
+                <button
+                  class="ml-auto w-75 btn btn-lg btn-outline-dark"
+                  type="button"
+                >
+                  Leave a Voicemail
+                </button>
+              </a>
+              <hr class="my-5" />
+              <p class="fs-5 mt-5 pt-5">
+                Or just use this contact form <br />
+                to shoot me a quick message.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5" @fromRight>
+      <div
+        class="container d-flex flex-column justify-content-center mb-5 pb-5"
+      >
+        <div
+          class="container card d-flex col-12 justify-content-center shadow my-2"
+        >
+          <form
+            class="needs-validation"
+            [ngClass]="{ 'was-validated': contactForm.invalid && !formValid }"
+            (ngSubmit)="onContactSubmit(contactForm)"
+            #contactForm="ngForm"
+          >
+            <div class="form-title text-center fs-3 my-5">Contact Form</div>
+            <label for="senderEmail" class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control mb-2"
+              id="senderEmail"
+              name="senderEmail"
+              placeholder="your@email.com"
+              [value]="'test@email.com'"
+              required
+              ngModel
+              autofocus
+            />
+            <div class="invalid-feedback">
+              Please enter a valid email.
+            </div>
+            <label for="senderName" class="form-label">Full Name</label>
+            <input
+              type="text"
+              class="form-control mb-2"
+              id="senderName"
+              name="senderName"
+              placeholder="First Last"
+              required
+              ngModel
+            />
+            <div class="invalid-feedback">Please enter your name.</div>
+            <label for="senderTitle" class="form-label">Title</label>
+            <input
+              type="text"
+              class="form-control mb-2"
+              id="senderTitle"
+              name="senderTitle"
+              placeholder="Ex: Recruiter, Manager (Company, if applicable)"
+              defaultValue="(title not provided)"
+              ngModel
+            />
+            <div class="mb-3">
+              <label for="subject" class="form-label">Subject</label>
+              <input
+                type="text"
+                class="form-control mb-2"
+                id="subject"
+                name="subject"
+                placeholder="Re:"
+                ngModel
+              />
+              <label for="message" class="form-label">Message</label>
+              <textarea
+                class="form-control"
+                id="message"
+                rows="6"
+                name="message"
+                required
+                ngModel
+              ></textarea>
+            </div>
+            <div class="invalid-feedback">Please enter your message.</div>
+            <button
+              type="submit"
+              class="btn btn-secondary m-4 px-4"
+              [disabled]="contactForm.invalid && !formValid"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-feedback></app-feedback>
+</div>
