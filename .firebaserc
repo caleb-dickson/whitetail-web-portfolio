@@ -1,13 +1,4 @@
 {
-  "targets": {
-    "whitetail-web": {
-      "hosting": {
-        "whitetail-web": [
-          "whitetail-web"
-        ]
-      }
-    }
-  },
   "projects": {
     "default": "whitetail-web"
   }

@@ -19,4 +19,3 @@ export class UserAuthData {
     return this._token;
   }
 }
-

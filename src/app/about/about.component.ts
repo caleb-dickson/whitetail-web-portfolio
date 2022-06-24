@@ -2,10 +2,7 @@ import { Component } from '@angular/core';
 import { Sweep_FadeFromLeft, Sweep_FadeFromRight } from '../app.animations';
 
 class Article {
-  name: string;
-  expanded: boolean;
-
-  constructor(name: string, expanded: boolean) {
+  constructor(public name: string, public expanded: boolean) {
     this.name = name;
     this.expanded = expanded;
   }

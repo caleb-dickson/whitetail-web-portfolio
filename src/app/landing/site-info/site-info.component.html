@@ -64,6 +64,9 @@
           <li class="list-unstyled">Hosting:</li>
           <li>Firebase Hosting</li>
         </ul>
+
+        <hr />
+
         <li class="mt-4">
           <h4 class="text-muted">Home</h4>
           <p>
@@ -87,7 +90,7 @@
         </li>
 
         <li class="mt-4">
-          <h4 class="text-muted">Authorization</h4>
+          <h4 class="text-muted">Authentication</h4>
           <p>
             <a
               *ngIf="!isAuthenticated"
@@ -115,9 +118,19 @@
             >
             on the back end.
           </p>
+          <p>
+            As of April 19, 2022, this has been refactored to use NGRX to manage
+            both Auth state and effects.
+            <br />
+            Now, authentication is much cleaner and also stores any new users
+            (<em>only</em> new users) in a firestore database along with any
+            user profile data, entered during signup, or site preferences.
+          </p>
         </li>
       </ul>
     </div>
+
+    <hr />
 
     <p>
       Other than that, just have a look around! You can press
@@ -125,7 +138,11 @@
         keyboard_command_key
       </span>
       <span class="fs-3"
-        >+ <span class="material-icons"> keyboard_option_key </span> + j
+        >+
+        <span class="material-icons align-text-bottom">
+          keyboard_option_key
+        </span>
+        + j
       </span>
       <br />
       (Ctrl + shift + j for microsoft users) or right click to inspect and have

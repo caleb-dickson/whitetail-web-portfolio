@@ -67,7 +67,7 @@
       </div>
       <div class="col-10 col-sm-8 col-lg-6">
         <img
-          src="../../../assets/mean-stack.jpeg"
+          src="../../../assets/mean-stack.webp"
           class="col-12 d-block mx-lg-auto img-fluid title-img"
           alt="A graphic explaining what the MEAN stack is."
           loading="lazy"
@@ -78,15 +78,15 @@
         <ul>
           <li class="lead">
             Typescript language features, and all of the great benefits of type
-            checking and "compile time" error messages from Typescript and Angular
+            checking and "compile time" error messages from Typescript and
+            Angular
           </li>
-          <li class="lead">Built in Model-View-Controller (MVC) architecture</li>
+          <li class="lead">Object Oriented Programming</li>
+          <li class="lead">
+            Built in Model-View-Controller (MVC) architecture
+          </li>
           <li class="lead">
             The feature rich Angular Command Line Interface (CLI)
-          </li>
-          <li class="lead">Fantastic IDE support</li>
-          <li class="lead">
-            Did I mention Angular error messages? They're awesome.
           </li>
         </ul>
         <p class="lead">
@@ -96,7 +96,7 @@
         <p class="lead">
           But not just yet.
           <br />
-          For now, let's have a look at what I've built so far with Angular.
+          For now, let's have a look at my latest Angular projects.
         </p>
       </div>
     </div>
@@ -104,43 +104,199 @@
 
   <div class="container col-xxl-12 px-4 py-5" id="shefbook">
     <div class="row align-items-center justify-items-center g-5 py-5">
-      <div class="col-12 col-sm-12 col-md-10 col-lg-7 col-xl-6 flex-lg-row">
-        <img
-          src="../../../assets/shefbook-screen.png"
-          class="d-block mx-lg-auto img-fluid project-main-img rounded-18 shadow"
-          alt="A screenshot of the Shefbook recipe app."
-        />
+      <div class="col-12 col-sm-12 col-md-10 col-lg-6 col-xl-6 flex-lg-row">
+        <div
+          id="myCarousel"
+          class="carousel slide carousel-fade"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#myCarousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#myCarousel"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#myCarousel"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#myCarousel"
+              data-bs-slide-to="3"
+              aria-label="Slide 4"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="500">
+              <img
+                src="../../../assets/projects/inventory/landing.png"
+                class="d-block mx-lg-auto img-fluid project-carousel-img rounded-18 shadow"
+                alt="A screenshot of the Shefbook recipe app."
+                aria-hidden="true"
+                focusable="false"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="500">
+              <img
+                src="../../../assets/projects/inventory/manage.png"
+                class="d-block mx-lg-auto img-fluid project-carousel-img rounded-18 shadow"
+                alt="A screenshot of the Shefbook recipe app."
+                aria-hidden="true"
+                focusable="false"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="500">
+              <img
+                src="../../../assets/projects/inventory/products.png"
+                class="d-block mx-lg-auto img-fluid project-carousel-img rounded-18 shadow"
+                alt="A screenshot of the Shefbook recipe app."
+                aria-hidden="true"
+                focusable="false"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="500">
+              <img
+                src="../../../assets/projects/inventory/inv.png"
+                class="d-block mx-lg-auto img-fluid project-carousel-img rounded-18 shadow"
+                alt="A screenshot of the Shefbook recipe app."
+                aria-hidden="true"
+                focusable="false"
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
       </div>
       <div class="col-lg-5 col-xl-6">
-        <h1 class="display-5 fw-bold lh-1 mb-3">Shefbook</h1>
-        <p class="lead">
-          Shefbook is a recipe book app that incorporates much of what you might
-          see in a classic "to-do list" style app.
-        </p>
-        <p class="lead">In Shefbook, users can:</p>
-        <ul class="lead">
-          <li>
-            Sign Up, Log In and Log Out handled programmaticaly in an
-            authorization component, and Firebase Authorization
-          </li>
-          <li>Fetch existing recipes from a Firebase Realtime Database</li>
-          <li>Create new recipes for the community</li>
-          <li>Edit recipes</li>
-          <li>
-            Send recipe ingredients lists to their locally stored shopping list
-          </li>
-          <li>Add, edit, delete shopping list items</li>
-        </ul>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-          <a
-            type="button"
-            class="btn btn-secondary btn-lg px-4"
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://shefbook-9ab2a.web.app/"
-          >
-            Visit Shefbook
-          </a>
+        <div class="ms-5">
+          <h1 class="display-5 fw-bold lh-1">Inventory</h1>
+          <p class="lead">
+            "Inventory" is an MVP inventory management app for the foodervice
+            industry.
+          </p>
+          <p class="lead">
+            Development began about 25 May 2022, it is still in it's very early
+            stages.
+          </p>
+          <p class="lead">As of 24 June 2022:</p>
+          <p class="lead">
+            Users can create Owner, Manager and Staff accounts with different
+            permissions for each within their organization.
+          </p>
+          <ul class="lead">
+            <li>
+              Owners can:
+              <ul>
+                <li>Define their business organization within the app</li>
+                <li>Define each of their business locations</li>
+                <li>Assign access permissions for Managers and Junior Staff</li>
+                <li>
+                  Or, unrestricted, just use the app themselves as they like
+                </li>
+              </ul>
+            </li>
+            <li>
+              Managers, for each location they are assigned to manage can:
+              <ul>
+                <li>Create new products</li>
+                <li>Create or approve current working inventory</li>
+                <li>View and filter historical inventory by date</li>
+              </ul>
+            </li>
+            <li>
+              Junior Staff can enter inventory counts for each location they are
+              assigned and submit them for approval by a Manager or Owner.
+            </li>
+            <li>
+              Image Uploads:
+              <ul>
+                <li>User avatars</li>
+                <li>Business avatars</li>
+                <li>Coming soon: Location avatars, Product photos</li>
+              </ul>
+            </li>
+            <li>
+              Some of the planned improvements:
+              <ul>
+                <li>
+                  Landing page content.
+                </li>
+                <li>
+                  Massive UX/UI improvements.
+                </li>
+                <li>More reusable app components. Much is redundant.</li>
+                <li>Change email/password feature.</li>
+                <li>
+                  Owner/Manager Dashboards.
+                </li>
+                <li>Instant messaging feature.</li>
+                <li>App Notifications.</li>
+                <li>
+                  Known bug fix: after login, the first API call fails
+                  authentication, subsequent requests all succeed.
+                </li>
+                <li>Flutter mobile companion app.</li>
+              </ul>
+            </li>
+          </ul>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a
+              type="button"
+              class="btn btn-secondary btn-lg"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="http://inventory-v.0.0.1.s3-website-us-east-1.amazonaws.com/"
+            >
+              Deployed App
+            </a>
+            <a
+              type="button"
+              class="btn btn-secondary btn-lg px-4"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/tacDev-io/inventory-app-mvp"
+            >
+              Frontend Code
+            </a>
+            <a
+              type="button"
+              class="btn btn-secondary btn-lg px-4"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/tacDev-io/inventory-api"
+            >
+              Backend Code
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -152,7 +308,7 @@
     >
       <div class="col-12 col-sm-12 col-md-10 col-lg-7 col-xl-6 flex-lg-row">
         <img
-          src="../../../assets/boggle-screen.png"
+          src="../../../assets/boggle-screen.webp"
           class="d-block mx-lg-auto img-fluid project-main-img rounded-24 shadow"
           alt="A screenshot of my Rock Paper Scissors app."
         />
@@ -190,7 +346,9 @@
           <li>Reactive Forms</li>
           <li>File uploads with Multer</li>
           <li>Observables/Rxjs basics</li>
-          <li>Simple authentication logic using JSON Web Token and Bcrypt js</li>
+          <li>
+            Simple authentication logic using JSON Web Token and Bcrypt js
+          </li>
           <li>Lazy Loaded Routes</li>
           <li>Pre Loading</li>
           <li>Creating a Node.js Server with Express.js</li>
@@ -202,15 +360,21 @@
           <li>MongoDB Integration</li>
           <li>AWS EC2/S3 Deployment</li>
         </ul>
+        <p class="lead">
+          24 June 2022: <br />
+          Boggle+ was a great as my first MEAN stack project. But it's time as a
+          deployed app has come to an end due to unnecessary AWS costs. You can
+          still see the code via the link below.
+        </p>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
           <a
             type="button"
             class="btn btn-secondary btn-lg px-4"
             target="_blank"
             rel="noopener noreferrer"
-            href="http://boggle-plus.s3-website-us-east-1.amazonaws.com/"
+            href="https://github.com/tacDev-io/boggle-plus"
           >
-            Visit Boggle +
+            View the Code
           </a>
         </div>
       </div>
@@ -221,7 +385,7 @@
     <div class="row align-items-center justify-items-center g-5 py-5">
       <div class="col-12 col-sm-12 col-md-10 col-lg-7 col-xl-6 flex-lg-row">
         <img
-          src="../../../assets/wws-screen.png"
+          src="../../../assets/wws-screen.webp"
           class="d-block mx-lg-auto img-fluid project-main-img rounded-24 shadow"
           alt="A screenshot of the Whitetail Web Service Landing Page."
         />
@@ -242,6 +406,52 @@
             View Site Info
           </a>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container col-xxl-12 px-4 py-5" id="shefbook">
+  <div
+    class="row flex-lg-row-reverse align-items-center justify-items-center g-5 py-5"
+  >
+    <div class="col-12 col-sm-12 col-md-10 col-lg-7 col-xl-6 flex-lg-row">
+      <img
+        src="../../../assets/shefbook-screen.webp"
+        class="d-block mx-lg-auto img-fluid project-main-img rounded-18 shadow"
+        alt="A screenshot of the Shefbook recipe app."
+      />
+    </div>
+    <div class="col-lg-5 col-xl-6">
+      <h1 class="display-5 fw-bold lh-1 mb-3">Shefbook</h1>
+      <p class="lead">
+        Shefbook is a recipe book app that incorporates much of what you might
+        see in a classic "to-do list" style app.
+      </p>
+      <p class="lead">In Shefbook, users can:</p>
+      <ul class="lead">
+        <li>
+          Sign Up, Log In and Log Out handled programmaticaly in an
+          authorization component, and Firebase Authorization
+        </li>
+        <li>Fetch existing recipes from a Firebase Realtime Database</li>
+        <li>Create new recipes for the community</li>
+        <li>Edit recipes</li>
+        <li>
+          Send recipe ingredients lists to their locally stored shopping list
+        </li>
+        <li>Add, edit, delete shopping list items</li>
+      </ul>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <a
+          type="button"
+          class="btn btn-secondary btn-lg px-4"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://shefbook-9ab2a.web.app/"
+        >
+          Visit Shefbook
+        </a>
       </div>
     </div>
   </div>

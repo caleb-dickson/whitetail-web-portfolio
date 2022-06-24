@@ -7,7 +7,6 @@ import { Store } from '@ngrx/store';
 import * as fromAppStore from '../app-store/app.reducer';
 
 import { AppService } from '../app.service';
-import { AuthService } from '../auth/auth-control/auth.service';
 import { map } from 'rxjs/operators';
 
 @Component({

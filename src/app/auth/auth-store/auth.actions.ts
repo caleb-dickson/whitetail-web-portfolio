@@ -1,4 +1,3 @@
-import { Auth, GoogleAuthProvider } from '@angular/fire/auth';
 import { createAction, props } from '@ngrx/store';
 
 export const emailPassLoginStart = createAction(

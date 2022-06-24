@@ -10,7 +10,7 @@ import { Store } from '@ngrx/store';
 import * as fromAppStore from '../../app-store/app.reducer';
 import * as AuthActions from '../../auth/auth-store/auth.actions';
 
-import { AuthResponseData, AuthService } from '../auth-control/auth.service';
+import { AuthService } from '../auth-control/auth.service';
 
 @Component({
   selector: 'app-signup',

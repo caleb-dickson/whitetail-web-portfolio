@@ -11,20 +11,34 @@ import { MaterialModule } from '../material.module';
 import { AuthModule } from '@angular/fire/auth';
 
 const blogRoutes: Routes = [
-  { path: '',
-  component: BlogComponent,
-  canActivate: [AuthGuard],
-  children: [
-    { path: 'articles', component: ArticleListComponent },
-    { path: 'article-create', component: ArticleCreateComponent }
-  ]
-},
+  {
+    path: '',
+    component: BlogComponent,
+    canActivate: [AuthGuard],
+    children: [
+      { path: 'articles', component: ArticleListComponent },
+      { path: 'article-create', component: ArticleCreateComponent },
+    ],
+  },
 ];
 
 @NgModule({
-  declarations: [ArticleCreateComponent, ArticleListComponent, BlogComponent],
-  imports: [CommonModule, RouterModule.forChild(blogRoutes), MaterialModule, AuthModule],
-  exports: [ArticleCreateComponent, ArticleListComponent, BlogComponent],
-  providers: [AuthGuard]
+  declarations: [
+    ArticleCreateComponent,
+    ArticleListComponent,
+    BlogComponent
+  ],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(blogRoutes),
+    MaterialModule,
+    AuthModule,
+  ],
+  exports: [
+    ArticleCreateComponent,
+    ArticleListComponent,
+    BlogComponent
+  ],
+  providers: [AuthGuard],
 })
 export class BlogModule {}

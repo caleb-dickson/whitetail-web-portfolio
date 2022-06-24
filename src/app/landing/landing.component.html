@@ -1,5 +1,5 @@
 <div class="component-container" @rise>
-  <p class="small-text ms-3 dev-notes text-center text-sm-start">
+  <p class="dev-notes ms-3 text-center text-sm-start">
     Actively seeking employment.
     <br />
     ::: Updated - {{ this.lastUpdated | date: "fullDate" }} :::
@@ -15,7 +15,7 @@
         <div class="d-flex justify-content-center col-10 col-lg-4 ps-lg-0">
           <img
             *ngIf="!isAuthenticated"
-            src="../../assets/headshot-lg.png"
+            src="../../assets/headshot-lg.webp"
             class="d-block mx-lg-auto img-fluid headshot"
             alt="A professional headshot of Caleb Dickson."
             loading="lazy"
