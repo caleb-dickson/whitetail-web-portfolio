@@ -6,7 +6,7 @@
       <p>
         I designed this site for demo purposes as an
         <a
-          class="text-danger"
+        class="brand-light-font"
           target="_blank"
           rel="noopener noreferrer"
           href="https://angular.io/guide/what-is-angular"
@@ -20,6 +20,17 @@
           href="https://firebase.google.com/"
           >Firebase</a
         >.
+      </p>
+      <p>
+        View the source code for this app
+        <a
+          class="brand-light-font"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/tacDev-io/whitetail-web-portfolio"
+          >here</a
+        >
+        on Github.
       </p>
       <p>Here are just a few topics I want to specifically touch on for now:</p>
     </div>
@@ -132,34 +143,19 @@
 
     <hr />
 
-    <p>
-      Other than that, just have a look around! You can press
-      <span class="material-icons align-text-bottom">
-        keyboard_command_key
-      </span>
-      <span class="fs-3"
-        >+
-        <span class="material-icons align-text-bottom">
-          keyboard_option_key
-        </span>
-        + j
-      </span>
-      <br />
-      (Ctrl + shift + j for microsoft users) or right click to inspect and have
-      a look at the code.
+    <p class="text-center mt-5">
+      Have a look around! <br />
+      The About Me section is a good place to start.
     </p>
-    <p>
-      If you're on a mobile device or not sure where to start, the "About Me"
-      section is a good place to go first.
-    </p>
-    <a
-      mat-raised-button
-      type="button"
-      class="btn-secondary brand-dark-font px-4 py-1 ms-5"
-      routerLink="/about"
-      routerLinkActive="active"
-    >
-      Go to About Me
-    </a>
   </div>
+
+  <a
+    mat-raised-button
+    type="button"
+    class="btn-secondary brand-dark-font px-4 mb-5"
+    routerLink="/about"
+    routerLinkActive="active"
+  >
+    Go to About Me
+  </a>
 </div>

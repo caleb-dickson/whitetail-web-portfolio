@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { GithubResponseData } from './GithubResponseData.model';
 
 @Injectable({
   providedIn: 'root',
@@ -17,7 +18,7 @@ export class AppService {
     return this.lastUpdated;
   }
 
-  getGithubData(): Observable<any> {
+  getGithubData(): Observable<GithubResponseData> {
     return this.http.get<any>('https://api.github.com/users/tacDev-io')
   }
 
