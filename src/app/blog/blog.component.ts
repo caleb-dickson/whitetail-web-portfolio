@@ -1,6 +1,6 @@
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { AppService } from '../app.service';
+import { AppService } from '../app-service/app.service';
 
 @Component({
   selector: 'app-blog',

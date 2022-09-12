@@ -6,8 +6,9 @@ import { Rise_FadeUp } from '../app.animations';
 import { Store } from '@ngrx/store';
 import * as fromAppStore from '../app-store/app.reducer';
 
-import { AppService } from '../app.service';
+import { AppService } from '../app-service/app.service';
 import { map } from 'rxjs/operators';
+import { GithubResponseData } from '../app-service/GithubResponseData.model';
 
 @Component({
   selector: 'app-landing',
@@ -24,8 +25,11 @@ export class LandingComponent implements OnInit, OnDestroy {
   userPhoto: string;
   error: string = null;
 
+  githubData: GithubResponseData;
+
   private userAuthSub: Subscription;
   private userProfileSub: Subscription;
+  private githubDataSub: Subscription;
 
   constructor(
     private appService: AppService,
@@ -33,6 +37,10 @@ export class LandingComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
+    this.githubDataSub = this.appService
+      .getGithubData()
+      .subscribe((gh) => (this.githubData = gh));
+
     this.appService.getLastUpdate();
     this.lastUpdated = this.appService.lastUpdated;
 
@@ -66,5 +74,6 @@ export class LandingComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.userAuthSub.unsubscribe();
     this.userProfileSub.unsubscribe();
+    this.githubDataSub.unsubscribe();
   }
 }

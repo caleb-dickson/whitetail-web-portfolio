@@ -15,7 +15,7 @@
         <div class="d-flex justify-content-center col-10 col-lg-4 ps-lg-0">
           <img
             *ngIf="!isAuthenticated"
-            src="../../assets/headshot-lg.webp"
+            [src]="githubData?.avatar_url"
             class="d-block mx-lg-auto img-fluid headshot"
             alt="A professional headshot of Caleb Dickson."
             loading="lazy"
@@ -42,11 +42,15 @@
             Welcome{{ ', ' + displayName }}!
           </h1>
           <p *ngIf="!isAuthenticated" class="lead mb-5 ms-5 me-4">
+            {{ githubData?.bio }}
+          </p>
+
+          <!-- <p *ngIf="!isAuthenticated" class="lead mb-5 ms-5 me-4">
             Hi, I'm Caleb, <br />
             I'm a front end Angular developer and this is my portfolio
             website.<br /><br />Here, you'll find out a little more about me,
             what I do, and where I've been.
-          </p>
+          </p> -->
           <div
             class="d-grid gap-4 justify-content-center d-md-flex justify-content-center w-sm-auto mt-5"
           >
